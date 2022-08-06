@@ -1,0 +1,286 @@
+_G.Minimized = false
+
+local NewbieHub = Instance.new("ScreenGui")
+local MainTop = Instance.new("Frame")
+local Main = Instance.new("Frame")
+local Manager = Instance.new("ScrollingFrame")
+local Kick_Me = Instance.new("Frame")
+local Label = Instance.new("TextLabel")
+local Reason = Instance.new("TextBox")
+local Sumbit = Instance.new("TextButton")
+local UIGridLayout = Instance.new("UIGridLayout")
+local Walkspeed = Instance.new("Frame")
+local Label_2 = Instance.new("TextLabel")
+local SetTo = Instance.new("TextBox")
+local Sumbit_2 = Instance.new("TextButton")
+local JumpPower = Instance.new("Frame")
+local Label_3 = Instance.new("TextLabel")
+local SetTo_2 = Instance.new("TextBox")
+local Sumbit_3 = Instance.new("TextButton")
+local Desroy_Character = Instance.new("Frame")
+local Label_4 = Instance.new("TextLabel")
+local Sumbit_4 = Instance.new("TextButton")
+local Label_5 = Instance.new("TextLabel")
+local Close = Instance.new("TextButton")
+local Minimize = Instance.new("TextButton")
+
+--Properties:
+
+NewbieHub.Name = "NewbieHub"
+NewbieHub.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+NewbieHub.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+MainTop.Name = "MainTop"
+MainTop.Parent = NewbieHub
+MainTop.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+MainTop.Position = UDim2.new(0.118796989, 0, 0.313971728, 0)
+MainTop.Size = UDim2.new(0, 402, 0, 28)
+MainTop.Active = true
+MainTop.Draggable = true
+
+Main.Name = "Main"
+Main.Parent = MainTop
+Main.BackgroundColor3 = Color3.fromRGB(57, 57, 57)
+Main.Position = UDim2.new(0, 0, 1.0000006, 0)
+Main.Size = UDim2.new(0, 401, 0, 171)
+
+Manager.Name = "Manager"
+Manager.Parent = Main
+Manager.Active = true
+Manager.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Manager.BackgroundTransparency = 1.000
+Manager.Position = UDim2.new(0.0310735162, 0, 0.0350877196, 0)
+Manager.Size = UDim2.new(0, 388, 0, 157)
+Manager.ScrollBarThickness = 0
+
+Kick_Me.Name = "Kick_Me"
+Kick_Me.Parent = Manager
+Kick_Me.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Kick_Me.BackgroundTransparency = 0.700
+Kick_Me.Size = UDim2.new(0, 124, 0, 151)
+
+Label.Name = "Label"
+Label.Parent = Kick_Me
+Label.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Label.BackgroundTransparency = 1.000
+Label.Size = UDim2.new(0, 124, 0, 35)
+Label.Font = Enum.Font.Ubuntu
+Label.Text = "Kick Yourself"
+Label.TextColor3 = Color3.fromRGB(255, 255, 255)
+Label.TextScaled = true
+Label.TextSize = 14.000
+Label.TextWrapped = true
+
+Reason.Name = "Reason"
+Reason.Parent = Kick_Me
+Reason.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Reason.BackgroundTransparency = 0.700
+Reason.Position = UDim2.new(0.112903222, 0, 0.304635763, 0)
+Reason.Size = UDim2.new(0, 96, 0, 27)
+Reason.Font = Enum.Font.SourceSans
+Reason.PlaceholderText = "Reason Here..."
+Reason.Text = ""
+Reason.TextColor3 = Color3.fromRGB(255, 255, 255)
+Reason.TextScaled = true
+Reason.TextSize = 14.000
+Reason.TextWrapped = true
+
+Sumbit.Name = "Sumbit"
+Sumbit.Parent = Kick_Me
+Sumbit.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Sumbit.BackgroundTransparency = 0.700
+Sumbit.Position = UDim2.new(0.112903222, 0, 0.576158941, 0)
+Sumbit.Size = UDim2.new(0, 96, 0, 50)
+Sumbit.Font = Enum.Font.Ubuntu
+Sumbit.Text = "Sumbit"
+Sumbit.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sumbit.TextScaled = true
+Sumbit.TextSize = 14.000
+Sumbit.TextWrapped = true
+Sumbit.MouseButton1Down:Connect(function()
+	game.Players.LocalPlayer:Kick(Reason.Text)
+end)
+
+UIGridLayout.Parent = Manager
+UIGridLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIGridLayout.CellSize = UDim2.new(0, 124, 0, 151)
+
+Walkspeed.Name = "Walkspeed"
+Walkspeed.Parent = Manager
+Walkspeed.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Walkspeed.BackgroundTransparency = 0.700
+Walkspeed.Size = UDim2.new(0, 124, 0, 151)
+
+Label_2.Name = "Label"
+Label_2.Parent = Walkspeed
+Label_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Label_2.BackgroundTransparency = 1.000
+Label_2.Size = UDim2.new(0, 124, 0, 35)
+Label_2.Font = Enum.Font.Ubuntu
+Label_2.Text = "Set WalkSpeed"
+Label_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Label_2.TextScaled = true
+Label_2.TextSize = 14.000
+Label_2.TextWrapped = true
+
+SetTo.Name = "SetTo"
+SetTo.Parent = Walkspeed
+SetTo.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+SetTo.BackgroundTransparency = 0.700
+SetTo.Position = UDim2.new(0.112903222, 0, 0.304635763, 0)
+SetTo.Size = UDim2.new(0, 96, 0, 27)
+SetTo.Font = Enum.Font.SourceSans
+SetTo.PlaceholderText = "WalkSpeed Here..."
+SetTo.Text = ""
+SetTo.TextColor3 = Color3.fromRGB(255, 255, 255)
+SetTo.TextScaled = true
+SetTo.TextSize = 14.000
+SetTo.TextWrapped = true
+
+Sumbit_2.Name = "Sumbit"
+Sumbit_2.Parent = Walkspeed
+Sumbit_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Sumbit_2.BackgroundTransparency = 0.700
+Sumbit_2.Position = UDim2.new(0.112903222, 0, 0.576158941, 0)
+Sumbit_2.Size = UDim2.new(0, 96, 0, 50)
+Sumbit_2.Font = Enum.Font.Ubuntu
+Sumbit_2.Text = "Sumbit"
+Sumbit_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sumbit_2.TextScaled = true
+Sumbit_2.TextSize = 14.000
+Sumbit_2.TextWrapped = true
+Sumbit_2.MouseButton1Down:Connect(function()
+	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = SetTo.Text
+end)
+
+JumpPower.Name = "JumpPower"
+JumpPower.Parent = Manager
+JumpPower.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+JumpPower.BackgroundTransparency = 0.700
+JumpPower.Size = UDim2.new(0, 124, 0, 151)
+
+Label_3.Name = "Label"
+Label_3.Parent = JumpPower
+Label_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Label_3.BackgroundTransparency = 1.000
+Label_3.Size = UDim2.new(0, 124, 0, 35)
+Label_3.Font = Enum.Font.Ubuntu
+Label_3.Text = "Set JumpPower"
+Label_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+Label_3.TextScaled = true
+Label_3.TextSize = 14.000
+Label_3.TextWrapped = true
+
+SetTo_2.Name = "SetTo"
+SetTo_2.Parent = JumpPower
+SetTo_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+SetTo_2.BackgroundTransparency = 0.700
+SetTo_2.Position = UDim2.new(0.112903222, 0, 0.304635763, 0)
+SetTo_2.Size = UDim2.new(0, 96, 0, 27)
+SetTo_2.Font = Enum.Font.SourceSans
+SetTo_2.PlaceholderText = "JumpPower Here..."
+SetTo_2.Text = ""
+SetTo_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+SetTo_2.TextScaled = true
+SetTo_2.TextSize = 14.000
+SetTo_2.TextWrapped = true
+
+Sumbit_3.Name = "Sumbit"
+Sumbit_3.Parent = JumpPower
+Sumbit_3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Sumbit_3.BackgroundTransparency = 0.700
+Sumbit_3.Position = UDim2.new(0.112903222, 0, 0.576158941, 0)
+Sumbit_3.Size = UDim2.new(0, 96, 0, 50)
+Sumbit_3.Font = Enum.Font.Ubuntu
+Sumbit_3.Text = "Sumbit"
+Sumbit_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sumbit_3.TextScaled = true
+Sumbit_3.TextSize = 14.000
+Sumbit_3.TextWrapped = true
+Sumbit_3.MouseButton1Down:Connect(function()
+	game.Players.LocalPlayer.Character.Humanoid.JumpPower = SetTo_2.Text
+	game.Players.LocalPlayer.Character.Humanoid.JumpHeight = SetTo_2.Text
+end)
+
+Desroy_Character.Name = "Desroy_Character"
+Desroy_Character.Parent = Manager
+Desroy_Character.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Desroy_Character.BackgroundTransparency = 0.700
+Desroy_Character.Size = UDim2.new(0, 124, 0, 151)
+
+Label_4.Name = "Label"
+Label_4.Parent = Desroy_Character
+Label_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Label_4.BackgroundTransparency = 1.000
+Label_4.Size = UDim2.new(0, 124, 0, 35)
+Label_4.Font = Enum.Font.Ubuntu
+Label_4.Text = "Desroy Character"
+Label_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+Label_4.TextScaled = true
+Label_4.TextSize = 14.000
+Label_4.TextWrapped = true
+
+Sumbit_4.Name = "Sumbit"
+Sumbit_4.Parent = Desroy_Character
+Sumbit_4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Sumbit_4.BackgroundTransparency = 0.700
+Sumbit_4.Position = UDim2.new(0.112903222, 0, 0.231788084, 0)
+Sumbit_4.Size = UDim2.new(0, 96, 0, 102)
+Sumbit_4.Font = Enum.Font.Ubuntu
+Sumbit_4.Text = "Sumbit"
+Sumbit_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sumbit_4.TextScaled = true
+Sumbit_4.TextSize = 14.000
+Sumbit_4.TextWrapped = true
+Sumbit_4.MouseButton1Down:Connect(function()
+	game.Players.LocalPlayer.Character:Destroy()
+end)
+
+Label_5.Name = "Label"
+Label_5.Parent = MainTop
+Label_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Label_5.BackgroundTransparency = 1.000
+Label_5.Size = UDim2.new(0, 267, 0, 28)
+Label_5.Font = Enum.Font.Nunito
+Label_5.Text = "Useless Hub"
+Label_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+Label_5.TextScaled = true
+Label_5.TextSize = 14.000
+Label_5.TextWrapped = true
+Label_5.TextXAlignment = Enum.TextXAlignment.Left
+
+Close.Name = "Close"
+Close.Parent = MainTop
+Close.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
+Close.Position = UDim2.new(0.923728824, 0, 0, 0)
+Close.Size = UDim2.new(0, 27, 0, 28)
+Close.Font = Enum.Font.SourceSans
+Close.Text = "X"
+Close.TextColor3 = Color3.fromRGB(255, 0, 0)
+Close.TextScaled = true
+Close.TextSize = 14.000
+Close.TextWrapped = true
+Close.MouseButton1Down:Connect(function()
+	NewbieHub:Destroy()
+end)
+
+Minimize.Name = "Minimize"
+Minimize.Parent = MainTop
+Minimize.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
+Minimize.Position = UDim2.new(0.847457647, 0, 0, 0)
+Minimize.Size = UDim2.new(0, 27, 0, 28)
+Minimize.Font = Enum.Font.SourceSans
+Minimize.Text = "-"
+Minimize.TextColor3 = Color3.fromRGB(255, 255, 255)
+Minimize.TextScaled = true
+Minimize.TextSize = 14.000
+Minimize.TextWrapped = true
+Minimize.MouseButton1Down:Connect(function()
+	if _G.Minimized == false then
+		_G.Minimized = true
+		Main.Visible = false
+	else
+		_G.Minimized = false
+		Main.Visible = true
+	end
+end)
